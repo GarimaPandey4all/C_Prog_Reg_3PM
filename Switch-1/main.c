@@ -9,7 +9,8 @@ int main()
     int choice;
     int a, b;
 
-    while(1) // 1- always true, infinite loop/repetition
+    //while(1) // 1- always true, infinite loop/repetition
+    for(;;)
     {
         printf("\n\n************Calculator*************\n\n");
         printf("Press 1. Addition\n");

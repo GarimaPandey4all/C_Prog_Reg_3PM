@@ -8,7 +8,7 @@ struct Date {
     int month; // 4
     int year; // 4
 
-}date;
+}date, *pdate;
 
 //struct Date date, date2, date3;
 
@@ -16,11 +16,20 @@ int main()
 {
  //   struct Date date, date2, date3;
 
-    date.day = 2;
-    date.month = 1;
-    date.year = 2022;
+    pdate = &date;
 
-    printf("%d %d %d", date.day, date.month, date.year);
+    pdate->day = 2;
+    pdate->month = 1;
+    (*pdate).year = 2022;
+
+    printf("%d %d %d", pdate->day, pdate->month, (*pdate).year);
+
+
+//    date.day = 2;
+//    date.month = 1;
+//    date.year = 2022;
+//
+//    printf("%d %d %d", date.day, date.month, date.year);
 
     return 0;
 }

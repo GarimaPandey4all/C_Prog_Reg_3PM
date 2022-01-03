@@ -8,7 +8,7 @@ union Date {
     int month; // 4
     int year; // 4
 
-}date;
+}date, *pdate;
 
 //union Date date, date2, date3;
 
@@ -16,12 +16,14 @@ int main()
 {
  //   union Date date, date2, date3;
 
-    date.day = 2;
-     printf("%d\n", date.day);
-    date.month = 1;
-     printf("%d\n", date.month);
-    date.year = 2022;
-    printf("%d", date.year);
+    pdate = &date;
+
+    pdate->day = 2;
+     printf("%d ", pdate->day);
+    pdate->month = 1;
+     printf("%d ", pdate->month);
+    pdate->year = 2022;
+    printf("%d", pdate->year);
 
     return 0;
 }
